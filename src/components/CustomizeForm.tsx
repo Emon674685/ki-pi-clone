@@ -22,10 +22,10 @@ const CustomizeForm = ({
 }: CustomizeFormProps) => {
   return (
     <div className="w-full">
-      <div className="space-y-4">
-        <div className="grid grid-cols-2 gap-3">
-          <div className="space-y-2">
-            <Label htmlFor="name" className="text-sm text-muted-foreground">
+      <div className="space-y-3 sm:space-y-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="space-y-1 sm:space-y-2">
+            <Label htmlFor="name" className="text-xs sm:text-sm text-muted-foreground">
               Your Name (optional)
             </Label>
             <Input
@@ -33,11 +33,11 @@ const CustomizeForm = ({
               placeholder="Enter your name"
               value={name}
               onChange={(e) => onNameChange(e.target.value)}
-              className="bg-secondary border-border focus:border-gold"
+              className="bg-secondary border-border focus:border-gold text-sm"
             />
           </div>
-          <div className="space-y-2">
-            <Label htmlFor="designation" className="text-sm text-muted-foreground">
+          <div className="space-y-1 sm:space-y-2">
+            <Label htmlFor="designation" className="text-xs sm:text-sm text-muted-foreground">
               Designation (optional)
             </Label>
             <Input
@@ -45,13 +45,13 @@ const CustomizeForm = ({
               placeholder="e.g. Student, Teacher"
               value={designation}
               onChange={(e) => onDesignationChange(e.target.value)}
-              className="bg-secondary border-border focus:border-gold"
+              className="bg-secondary border-border focus:border-gold text-sm"
             />
           </div>
         </div>
 
-        <div className="space-y-2">
-          <Label htmlFor="wishing" className="text-sm text-muted-foreground">
+        <div className="space-y-1 sm:space-y-2">
+          <Label htmlFor="wishing" className="text-xs sm:text-sm text-muted-foreground">
             Custom Wishing Text (optional)
           </Label>
           <Textarea
@@ -59,10 +59,10 @@ const CustomizeForm = ({
             placeholder={DEFAULT_WISHING_TEXT}
             value={wishingText}
             onChange={(e) => onWishingTextChange(e.target.value)}
-            className="bg-secondary border-border focus:border-gold min-h-[80px] resize-none text-sm"
+            className="bg-secondary border-border focus:border-gold min-h-[70px] sm:min-h-[80px] resize-none text-xs sm:text-sm"
             rows={3}
           />
-          <p className="text-xs text-muted-foreground">
+          <p className="text-[10px] sm:text-xs text-muted-foreground">
             Leave empty to use the default wishing text
           </p>
         </div>

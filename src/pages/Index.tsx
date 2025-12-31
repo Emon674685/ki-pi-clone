@@ -27,20 +27,20 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Header />
       
-      <main className="flex-1 container mx-auto px-4 py-8">
+      <main className="flex-1 container mx-auto px-3 sm:px-4 py-4 sm:py-8">
         <div className="max-w-6xl mx-auto">
           {/* Title */}
-          <div className="text-center mb-10">
-            <h1 className="text-3xl md:text-4xl font-display font-bold text-gold-gradient mb-2">
+          <div className="text-center mb-6 sm:mb-10">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gold-gradient mb-1 sm:mb-2">
               New Year Frame Editor
             </h1>
-            <p className="text-muted-foreground">Create your personalized New Year 2026 greeting</p>
+            <p className="text-muted-foreground text-sm sm:text-base">Create your personalized New Year 2026 greeting</p>
           </div>
 
           {/* Main content grid */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-8 items-start">
             {/* Frame Preview */}
-            <div className="flex justify-center lg:sticky lg:top-8">
+            <div className="flex justify-center lg:sticky lg:top-8 order-2 lg:order-1">
               <FramePreview 
                 uploadedImage={uploadedImage} 
                 canvasRef={canvasRef}
@@ -52,18 +52,18 @@ const Index = () => {
             </div>
 
             {/* Editor Panel */}
-            <div className="space-y-6">
-              <EditorCard title="Upload Photo" step={1}>
-                <PhotoUploader 
-                  onImageUpload={setUploadedImage} 
-                  uploadedImage={uploadedImage} 
-                />
-              </EditorCard>
-
-              <EditorCard title="Choose Template" step={2}>
+            <div className="space-y-3 sm:space-y-4 md:space-y-6 order-1 lg:order-2">
+              <EditorCard title="Choose Template" step={1}>
                 <TemplateSelector
                   selected={selectedTemplate}
                   onSelect={setSelectedTemplate}
+                />
+              </EditorCard>
+
+              <EditorCard title="Upload Photo" step={2}>
+                <PhotoUploader 
+                  onImageUpload={setUploadedImage} 
+                  uploadedImage={uploadedImage} 
                 />
               </EditorCard>
 
@@ -96,10 +96,12 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="py-6 text-center border-t border-border">
-        <p className="text-muted-foreground text-sm">
-          © 2026 Kishoreganj Polytechnic Institute. Made with{" "}
-          <span className="text-gold">♥</span>
+      <footer className="py-4 text-center border-t border-border">
+        <p className="text-muted-foreground text-sm mb-1">
+          © 2026 Kishoreganj Polytechnic Institute
+        </p>
+        <p className="text-muted-foreground/60 text-[10px]">
+          Powered by Emon Ahammed
         </p>
       </footer>
     </div>

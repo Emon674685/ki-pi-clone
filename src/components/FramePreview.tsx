@@ -52,12 +52,12 @@ const FramePreview = ({
   }, [uploadedImage, canvasRef, template, name, designation, wishingText]);
 
   return (
-    <div className="relative flex items-center justify-center">
-      <div className="relative border-gold-gradient rounded-xl overflow-hidden glow-gold">
+    <div className="relative flex items-center justify-center p-2 sm:p-0">
+      <div className="relative border-gold-gradient rounded-lg sm:rounded-xl overflow-hidden glow-gold">
         <canvas
           ref={canvasRef}
           className="max-w-full h-auto"
-          style={{ maxWidth: "400px" }}
+          style={{ maxWidth: "min(400px, 90vw)" }}
         />
       </div>
       

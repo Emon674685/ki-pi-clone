@@ -75,7 +75,7 @@ const PhotoUploader = ({ onImageUpload, uploadedImage }: PhotoUploaderProps) => 
       <label
         htmlFor="photo-upload"
         className={`
-          relative flex flex-col items-center justify-center w-full h-48 
+          relative flex flex-col items-center justify-center w-full h-36 sm:h-48 
           border-2 border-dashed rounded-xl cursor-pointer
           transition-all duration-300 ease-out
           ${isDragging 
