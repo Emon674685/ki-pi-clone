@@ -71,12 +71,6 @@ const PhotoUploader = ({ onImageUpload, uploadedImage }: PhotoUploaderProps) => 
 
   return (
     <div className="w-full">
-      <div className="flex items-center gap-2 mb-4">
-        <div className="w-8 h-8 rounded-full bg-gold flex items-center justify-center text-primary-foreground font-bold text-sm">
-          1
-        </div>
-        <h3 className="text-lg font-semibold text-foreground">Select Your Photo</h3>
-      </div>
 
       <label
         htmlFor="photo-upload"
